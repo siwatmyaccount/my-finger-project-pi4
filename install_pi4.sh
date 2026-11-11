@@ -22,6 +22,10 @@ FONT_DIR="$HOME/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 cp -f "$PROJECT_DIR/src_code/Sarabun-Regular.ttf" "$FONT_DIR/"
 cp -f "$PROJECT_DIR/src_code/Sarabun-Bold.ttf" "$FONT_DIR/"
+# Prompt TH UI font (Prompt + raised Thai tone marks): Light/Regular/SemiBold/Bold only. Medium must not be installed,
+# otherwise Tk on Linux renders every normal-weight label as Medium.
+cp -f "$PROJECT_DIR"/src_code/fonts/PromptTH-*.ttf "$FONT_DIR/"
+rm -f "$FONT_DIR/Prompt-Medium.ttf"
 fc-cache -f >/dev/null
 
 if ! id -nG "$USER" | tr ' ' '\n' | grep -qx video; then

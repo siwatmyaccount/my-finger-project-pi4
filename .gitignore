@@ -11,3 +11,9 @@ src_code/Anti-Finger.json
 src_code/data/
 src_code/dist/
 src_code/build/
+
+# Runtime data (patient results, logs)
+src_code/report_state.json
+src_code/report_state.json.tmp
+src_code/web_reports/
+src_code/run.log
